@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<style>
+bady{
+	background-color:#FFF;}
+	.Contentbox{
+		position:absolute;
+		width:100%;
+	margin-top:5%;
+	margin-left:0%;}
+/*tab1样式开始*/
+.Menubox1 ul{
+	list-style:none;
+	text-decoration:none;
+	color:#000;}
+.Menubox1 ul li{
+	float:left;
+	margin-left:12%;}
+.Menubox1 ul li a{
+	text-decoration:none;
+	color:#000;
+	}
+.Menubox1 ul li a:hover{
+	color:#06F;
+	text-decoration:underline;
+	line-height:10px;
+	}
+/*tab1样式结束*/
+
+/*tab2样式开始*/
+.Menubox2 ul{
+	list-style:none;
+	text-decoration:none;
+	color:#000;}
+.Menubox2 ul li{
+	float:left;
+	margin-left:15%;}
+.Menubox2 ul li a{
+	text-decoration:none;
+	color:#000;
+	}
+.Menubox2 ul li a:hover{
+	background-color:#09F;
+	color:#FFF;
+
+	line-height:10px;
+	}
+/*tab2样式结束*/
+
+
+</style>
+<script> 
+<!-- 
+function setTab(name,cursel,n){ 
+for(i=1;i<=n;i++){ 
+var menu=document.getElementById(name+i); 
+var con=document.getElementById("con_"+name+"_"+i); 
+menu.className=i==cursel?"hover":""; 
+con.style.display=i==cursel?"block":"none"; 
+} 
+} 
+//--> 
+</script> 
+<body>
+  <!--顶部结束-->
+  <div id="top">
+      <img src="images/1.jpg"  width="100%" height="100px">    
+  </div>
+  <!--顶部结束-->
+  
+  <!--主体开始-->
+  <div id="main">
+       <!--选项卡开始-->
+        <div id="tab1" style=" width:100%;">
+            <div class="Menubox1">
+                 <ul> 
+                  <li id="menu1" onClick="setTab('menu',1,5)" class="hover"><a href="#">主页</a></li> 
+                 <li id="menu2" onClick="setTab('menu',2,5)"><a href="#">赛前</a></li> 
+                 <li id="menu3" onClick="setTab('menu',3,5)" ><a href="#">赛时</a></li> 
+                 <li id="menu4" onClick="setTab('menu',4,5)" ><a href="#">赛后</a></li> 
+                 <li id="menu5" onClick="setTab('menu',5,5)" ><a href="#">...</a></li> 
+                 </ul> 
+             </div>
+        </div>
+        <!--选项卡结束-->
+        
+        <div class="Contentbox" style=" margin-top:3%;"> 
+<div id="con_menu_1" class="hover"> 
+  <!--表格按钮开始-->
+        <div id="table" style=" position:absolute;float:left;margin-top:5%; margin-left:0%; border-right:1px solid #CCC; background-color:#f8f8f8; width:100%; height:150px;">
+           <table width="99%" border="0" style="margin-top:5%; margin-left:0%;" >
+           <tr>
+           <td style="background-color:#FFF; height:50px; text-align:center;"><img src="images/person14.png">河南&nbsp;信阳市</td>
+           <td style="background-color:#FFF; height:50px; text-align:center;"><img src="images/person14.png">2016.3.15&nbsp;15:55</td>
+           </tr>
+           </table>
+           <input name="" type="button" value="点击报名" style="background-color:#FFF; color:#F00; border-color:#F00; width:98%; height:40px; font-size:16px; font-weight:bold; margin-top:2%;" />
+        </div>
+       <!--表格按钮结束-->
+       
+       <!--简介/规则开始-->
+       <div id="neirong"  style="width:70%; position:absolute; margin-top:27%; ">
+           <h4>简介/规则</h4>
+           <div id="title1" style="width:100%;text-align:center; margin-left:30%;"><p>重要提示:请仔细阅读公告第九至十一条</p><p>2016年信阳市环南湾湖徒步健身活动公告</p></div>
+           <div id="neirong2"  style="width:100%">
+               <p style="width:100%;">一、主办单位:信阳市冬泳协会</p>
+               <p style="width:100%;">二、协办单位:信阳市轮滑协会 信阳市跑步协会 红牛维他命饮料 信阳广播电视台FM94.8交通广播 信阳市南郊石化有限公司</p>
+           </div>
+       </div>
+       <!--简介/规则结束-->
+       
+       <!--三个图标开始-->
+       <div id="tubiao" style="width:100%; margin-top:70%; position:absolute;">
+           <center>
+        <a href="#"><img src="images/QQ.png"></a><a href="#"><img src="images/QQ.png"></a><a href="#"><img src="images/QQ.png"></a>
+        </center>
+       </div>
+        <!--三个图标结束-->
+        
+        <!--tab2开始-->
+           <div class="Menubox2" style="position:absolute; width:40%; margin-top:80%; margin-left:-6%;">
+                 <ul> 
+                 <li id="menu1" onClick="setTab('menu',1,11)" class="hover"><a href="#">已报名</a></li> 
+                 <li id="menu2" onClick="setTab('menu',2,11)" ><a href="#">更多(110)</a></li> 
+                 </ul> 
+             </div>
+        
+        <!--tab2结束-->
+</div> 
+<div id="con_menu_2" style="display:none"> 
+ 2
+</div> 
+<div id="con_menu_3" style="display:none"> 
+ 3
+</div> 
+<div id="con_menu_4" style="display:none"> 
+ 4
+</div>
+</div>
+        
+       
+  
+  </div>
+  <!--主体结束-->
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="js/jquery-2.1.4.js" type="text/javascript"></script>
+<title>无标题文档</title>
+</head>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+<!-- 
+function setTab(name,cursel,n){ 
+for(i=1;i<=n;i++){ 
+var menu=document.getElementById(name+i); 
+var con=document.getElementById("con_"+name+"_"+i); 
+menu.className=i==cursel?"hover":""; 
+con.style.display=i==cursel?"block":"none"; 
+} 
+} 
+//--> 
+  window.onload=function(){
+        var odiv=document.getElementById('C');
+        var oli=document.getElementById('li1');
+        oli.onmouseover=function(){
+            odiv.style.display="block";
+        }
+        oli.onmouseout=function(){
+            odiv.style.display="";
+        }
+    }
+
+function fun(obj){
+    obj.src="images/kaimushi1.jpg";
+	
+}
+
+$(function(){
+   $("#menu5 ").hover(function(){
+		$(this).find(".jnNav").show(300);
+	},function(){
+		$(this).find(".jnNav").hide(300);
+	});
+})
+</script>
+<style>
+/*选项卡样式开始*/
+.Menubox1{
+	
+	}
+.Menubox1 ul{
+	list-style:none;
+	text-decoration:none;
+	color:#000;
+	background-color:#FFF;
+	}
+.Menubox1 ul li{
+	float:left;
+	margin-left:12%;background-color:#FFF;}
+.Menubox1 ul li a{
+	text-decoration:none;
+	color:#000;
+	}
+.Menubox1 ul li a:hover{
+	color:#06F;
+	text-decoration:underline;
+	line-height:10px;
+	}
+.Contentbox{
+	position:absolute;
+	width:100%;
+	margin-top:5%;
+	margin-left:0%;}	
+	
+/*选项卡样式结束*/
+</style>
+<body onload="MM_preloadImages('images/sqc2.jpg')">
+<!--顶部内容开始-->
+<div style="position:fixed; top:0; z-index:999; background-color:#FFF; width:100%;">
+    <!--顶部图片开始-->
+<div><img src="images/top.png"  style="width:100%;height:100px;"></div>
+    <!--顶部图片结束-->
+    <!--顶部选项卡开始-->
+      <div class="Menubox1" >
+                 <ul> 
+                 <li id="menu1" onClick="setTab('menu',1,5)" class="hover" style="width:8%; margin-left:1%;"><a href="#">主页</a></li> 
+                 <li id="menu2" onClick="setTab('menu',2,5)" style="width:8%;"><a href="#">赛前</a></li> 
+                 <li id="menu3" onClick="setTab('menu',3,5)" style="width:8%;"><a href="#">赛时</a></li> 
+                 <li id="menu4" onClick="setTab('menu',4,5)" style="width:8%;"><a href="#">赛后</a></li> 
+                 <li id="menu5" onClick="setTab('menu',5,5)" style="width:8%;"><a href="#">...</a>
+                  <div class="jnNav" style="display:none; position:absolute; width:28%; margin-left:-15%; z-index:5555;">
+						<div class="subitem">
+							<dl class="fore">
+                      
+                        <table width="120" border="1" cellpadding="0" style="background-color:#FFF;">
+                        <tr>
+                        <td >竞赛项目/分组</td>
+                        </tr>
+                        <tr>
+                        <td >组织者信息</td>
+                        </tr>
+                        <tr>
+                        <td>赛场定位</td>
+                        </tr>
+                        <tr>
+                        <td>扫码签到</td>
+                        </tr>
+                        <tr>
+                        <td>幸运抽奖</td>
+                        </tr>
+                        </table>
+
+                        
+							</dl>
+                    </div>
+                 </div>
+           </div>
+    <!--顶部选项卡结束-->
+</div>
+<!--顶部内容结束-->
+
+<!--中间内容开始-->
+<div>
+  <div class="Contentbox" style=" margin-top:3%;"> 
+                 <!--主页内容开始-->
+                 <div id="con_menu_1" class="hover"> 
+                    <!--表格按钮开始-->
+                    <div style="height:100px; width:100%;   margin:0 auto;">
+                    <div id="table" style=" position:absolute;float:left;margin-top:22%; margin-left:0%; border-right:1px solid #CCC; background-color:#f8f8f8; width:100%; height:150px;">
+                    <input name="" type="button" value="我要报名" style="background-color:#FFF; color:#e86f1c; border-color:#e86f1c; width:50%; height:40px; font-size:16px; font-weight:bold; margin-top:2%; margin-left:25%;" />
+                      <table width="99%" border="0" style="margin-top:5%; margin-left:0%;" >
+                      <tr>
+                      <td style="background-color:#FFF; height:50px; text-align:center;"><img src="images/person14.png">河南&nbsp;信阳市</td>
+                      <td style="background-color:#FFF; height:50px; text-align:center;"><img src="images/person14.png">2016.3.15&nbsp;15:55</td>
+                      </tr>
+                     </table>
+                    
+                   </div>
+                   <!--表格按钮结束-->
+                   
+                    <!--赛事详情开始-->
+                   <div id="neirong"  style="width:70%; position:absolute; margin-top:27%; ">
+                     <div id="jianjie" style=" position:absolute; margin-top:30%;"><h4>赛事详情</h4></div>
+                     <div style="border:1px #000000;">1</div>
+                     <div id="title1" style="width:130%;  margin-top:43%; "><p>
+                        &nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+                    </p>
+                       </div>
+                 </div>
+                 <!--赛事详情结束-->
+                 <!--简介/规则开始-->
+                         <div id="neirong"  style="width:70%; position:absolute; margin-top:100%; ">
+                       <div id="jianjie" style=" position:absolute; margin-top:7%;"><h4>简介/规则</h4></div>
+                       <div id="title1" style="width:120%;  margin-top:20%; "><p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+                    </p>
+                       </div>
+                 </div>
+                 </div>
+                 <!--简介/规则结束-->
+                 <!--底部开始-->
+                <div style=" width:100%;  bottom:0;  position:fixed; ">
+
+
+                      
+                           
+
+                  </div>
+                   <!--底部结束-->
+                 </div> 
+                 
+                 <!--主页内容结束-->
+                   
+                  <!--赛前内容开始-->
+                <div id="con_menu_2" style="display:none"> 
+                  <div><h4>赛前动态</h4></div>
+                  <div id="kaimushi"><a href="index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','images/kaimushi1.jpg',1)"><img src="images/kaimushi2.jpg" width="100%" height="60" id="Image4" /></a></div>
+                  <div style="background-color:#f8f8f8; margin-top:20%;"><img src="images/zs.jpg" style="margin-top:1%; width:100%; height:82%;"></div>
+                  <div  style="margin:0 auto; position:fixed; bottom:0;">
+
+ 
+                  </div>
+      
+                </div> 
+                 <!--赛前内容开始-->
+                 
+                 <!--赛时内容开始-->
+                 <div id="con_menu_3" style="display:none"> 
+                  3
+                </div> 
+                <!--赛时内容结束-->
+                
+                <!--赛后内容开始-->
+                <div id="con_menu_4" style="display:none"> 
+                 4
+                </div>
+                <!--赛时内容结束-->
+                
+                 <!--...内容开始-->
+                <div id="con_menu_5" style="display:none"> 
+                 5
+                </div>
+                <!--...内容结束-->
+  </div>
+        
+       
+  
+</div>
+       <!--选项卡1结束-->
+
+</div>
+<!--中间内容结束-->
+
+<!--底部内容开始-->
+<div style="position:fixed; bottom:0;">
+                <div style=" width:100%;  bottom:0;  position:fixed; ">
+                <table width="100%" border="0" style="background-color:#FFF;">
+  <tr>
+    <td>   <input name="" type="button" value="我要报名" style="background-color:#e86f1c; color:#FFF; border-color:#e86f1c; width:40%; height:30px; font-size:16px; font-weight:bold; margin-left:30%; "/></td>
+    <td>      <input name="" type="button" value="发帖" style="background-color:#e86f1c; color:#FFF; border-color:#e86f1c; width:50%; height:30px; font-size:16px; font-weight:bold; margin-left:-10%;" /></td>
+  </tr>
+</table>
+
+                      
+                           
+                                             <div>
+                                   <table width="98%" height="80%" border="1" style="background-color:#FFF;">
+                         <tr>
+    <td ><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image8','','images/sqc2.jpg',1)"><img src="images/saishi1.jpg" width="73" height="96" id="Image" /></a></td>
+    <td><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','images/sqc.png',1)"><img src="images/sqh.png" width="54" height="55" id="Image7" style=" margin-left:30%;"></a></td>
+    <td><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','images/grc.png',1)"><img src="images/geh.png" width="45" height="50" id="Image8" style=" margin-left:30%;"></a></td>
+  </tr>
+</table>
+
+                  
+                  
+                  </div>
+  </div>
+</div>
+<!--底部内容结束-->
+</body>
+</html>

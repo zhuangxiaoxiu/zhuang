@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<style>
+
+/*tab1样式开始*/
+.Menubox1 ul{
+	list-style:none;
+	text-decoration:none;
+	color:#000;}
+.Menubox1 ul li{
+	float:left;
+	margin-left:12%;}
+.Menubox1 ul li a{
+	text-decoration:none;
+	color:#000;
+	}
+.Menubox1 ul li a:hover{
+	color:#06F;
+	text-decoration:underline;
+	line-height:10px;
+	}
+/*tab1样式结束*/
+
+
+.Contentbox{
+	position:absolute;
+	margin-top:5%;
+	margin-left:0%;}
+</style>
+<script> 
+<!-- 
+function setTab(name,cursel,n){ 
+for(i=1;i<=n;i++){ 
+var menu=document.getElementById(name+i); 
+var con=document.getElementById("con_"+name+"_"+i); 
+menu.className=i==cursel?"hover":""; 
+con.style.display=i==cursel?"block":"none"; 
+} 
+} 
+//--> 
+</script> 
+<body>
+<div id="all">
+  <!--顶部结束-->
+  <div id="top">
+      <img src="images/1.jpg"  width="100%" height="100px">    
+  </div>
+  <!--顶部结束-->
+  
+  <!--主体开始-->
+  <div id="main">
+  
+       <!--选项卡开始-->
+        <div id="tab1" style=" width:100%;">
+            <div class="Menubox1">
+                 <ul> 
+                 <li id="menu1" onClick="setTab('menu',1,5)" class="hover"><a href="#">主页</a></li> 
+                 <li id="menu2" onClick="setTab('menu',2,5)"><a href="#">赛前</a></li> 
+                 <li id="menu3" onClick="setTab('menu',3,5)" ><a href="#">赛时</a></li> 
+                 <li id="menu4" onClick="setTab('menu',4,5)" ><a href="#">赛后</a></li> 
+                 <li id="menu5" onClick="setTab('menu',5,5)" ><a href="#">...</a></li> 
+                 </ul> 
+             </div>
+        </div>
+        <!--选项卡结束-->
+        
+        <div class="Contentbox"> 
+            <div id="con_menu_1" class="hover"> 
+            <!--主页内容开始-->
+            
+            <!--表格按钮开始-->
+        <div id="table" style=" position:absolute;float:left;margin-top:5%; margin-left:10%; border-right:1px solid #CCC; background-color:#f8f8f8; width:100%; height:150px;">
+           <table width="99%" border="0" style="margin-top:5%; margin-left:0%;" >
+           <tr>
+           <td style="background-color:#FFF; height:50px; text-align:center;"><img src="images/person14.png">河南&nbsp;信阳市</td>
+           <td style="background-color:#FFF; height:50px; text-align:center;"><img src="images/person14.png">2016.3.15&nbsp;15:55</td>
+           </tr>
+           </table>
+       </div>
+       <!--表格按钮结束-->
+       
+       <!--简介/规则开始-->
+    
+       <!--简介/规则结束-->
+
+            <!--主页内容结束-->
+            </div> 
+<div id="con_menu_2" style="display:none"> 
+ 2
+</div> 
+<div id="con_menu_3" style="display:none"> 
+ 3
+</div> 
+<div id="con_menu_4" style="display:none"> 
+ 4
+</div>
+<div id="con_menu_5" style="display:none"> 
+ 5
+</div>
+</div>
+        
+       
+  
+  </div>
+  <!--主体结束-->
+ </div>
+</body>
+</html>
